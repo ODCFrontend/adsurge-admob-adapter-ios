@@ -28,7 +28,7 @@ static GADAdapterAdSurgeInitState _initState = GADAdapterAdSurgeInitStateUniniti
 
 /// Adapter iteration number (the "N" in X.Y.Z.N).
 /// Bump this for each Adapter-only release under the same ADN SDK version.
-static const NSInteger kAdapterIteration = 7;
+static const NSInteger kAdapterIteration = 0;
 
 #pragma mark - GADMediationAdapter
 

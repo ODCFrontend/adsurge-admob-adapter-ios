@@ -4,29 +4,35 @@ import PackageDescription
 let package = Package(
   name: "AdSurgeADNAdapterForAdMob",
   platforms: [
-    .iOS(.v13)
+    .iOS(.v12)
   ],
   products: [
     .library(
       name: "AdSurgeADNAdapterForAdMob",
-      targets: ["AdSurgeADNAdapterForAdMob"]
+      targets: ["AdSurgeADNAdapterForAdMobTarget"]
     )
   ],
   dependencies: [
-    .package(url: "https://github.com/ODCFrontend/adsurge-adn-ios.git", exact: "2.0.1"),
+    .package(url: "https://github.com/ODCFrontend/adsurge-adn-ios.git", exact: "2.0.2"),
     .package(
       url: "https://github.com/googleads/swift-package-manager-google-mobile-ads.git",
       "12.0.0"..<"99.0.0"),
   ],
   targets: [
     .target(
-      name: "AdSurgeADNAdapterForAdMob",
+      name: "AdSurgeADNAdapterForAdMobTarget",
       dependencies: [
+        .target(name: "AdSurgeADNAdapterForAdMob"),
         .product(name: "AdSurgeSDK", package: "adsurge-adn-ios"),
         .product(name: "GoogleMobileAds", package: "swift-package-manager-google-mobile-ads"),
       ],
-      path: "AdSurgeADNAdapterForAdMob",
-      publicHeadersPath: "."
-    )
+      path: "AdSurgeADNAdapterForAdMobTarget"
+    ),
+    .binaryTarget(
+      name: "AdSurgeADNAdapterForAdMob",
+      url:
+        "https://github.com/ODCFrontend/adsurge-admob-adapter-ios/releases/download/2.0.200/AdSurgeADNAdapterForAdMob.zip",
+      checksum: "9da9ca04f3781443a0eefd8c9303ad8170fe09552c5dfcd692f662f157e29b93"
+    ),
   ]
 )

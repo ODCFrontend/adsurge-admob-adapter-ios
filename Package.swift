@@ -32,7 +32,7 @@ let package = Package(
       name: "AdSurgeADNAdapterForAdMob",
       url:
         "https://github.com/ODCFrontend/adsurge-admob-adapter-ios/releases/download/2.0.200/AdSurgeADNAdapterForAdMob.zip",
-      checksum: "9da9ca04f3781443a0eefd8c9303ad8170fe09552c5dfcd692f662f157e29b93"
+      checksum: "cdf8882bed38ecec6374accd0d2005899a2e621575459aee71515d2cd62459a9"
     ),
   ]
 )
